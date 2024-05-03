@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.playCard {
+  padding-top: 1rem;
+}
+
+.pointsGame {
+  padding-top: 1rem;
+}
+
+.table {
+  display: grid;
+}
