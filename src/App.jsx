@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import Modal from './Modal';
-import { Empate } from './Empate';
+import { Dialog } from './Dialog';
 import './App.css';
+import { SelectorGame } from './Selector';
 
 function App() {
   let jugadaPc = '';
@@ -120,6 +121,7 @@ function App() {
             <option value="papel">Papel</option>
             <option value="tijera">Tijera</option>
           </select>
+          <SelectorGame />
         </div>
         <div>
           <button type="submit" id="button" disabled={noPlay}>
@@ -136,7 +138,7 @@ function App() {
         </div>
         {showModal && (
           <Modal onClick={handleModalClose}>
-            <Empate message={mess} />
+            <Dialog message={mess} />
             <button onClick={handleModalClose}>Cerrar</button>
           </Modal>
         )}
