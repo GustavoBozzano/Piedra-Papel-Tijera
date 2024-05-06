@@ -108,7 +108,7 @@ function App() {
         <div className="card">
           <h1>JUGUEMOS:</h1>
           <label htmlFor="human">Selecciona tu jugada: </label>
-          <select
+          {/* <select
             name="human"
             id="playHuman"
             defaultValue={''}
@@ -120,8 +120,8 @@ function App() {
             <option value="piedra">Piedra</option>
             <option value="papel">Papel</option>
             <option value="tijera">Tijera</option>
-          </select>
-          <SelectorGame />
+          </select> */}
+          <SelectorGame SetPlayHumano="jugada" />
         </div>
         <div>
           <button type="submit" id="button" disabled={noPlay}>
