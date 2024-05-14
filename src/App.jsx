@@ -10,9 +10,9 @@ import './App.css';
 function App() {
   let jugadaPc = '';
   let jugadaHumano = '';
-  const iconPiedra = '../public/Piedra.jpg';
-  const iconPapel = '../public/Papel.jpg';
-  const iconTijera = '../public/Tijera.jpg';
+  const iconPiedra = './Piedra.jpg';
+  const iconPapel = './Papel.jpg';
+  const iconTijera = './Tijera.jpg';
 
   const [playHumano, setPlayHumano] = useState(); // JUGADA HUMANO
   const [playPc, setPlayPc] = useState(); // JUGADA PC
