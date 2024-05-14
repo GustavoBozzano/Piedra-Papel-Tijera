@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Modal from './components/Modal';
 import { Dialog } from './utils/Dialog';
-import { SelectorGame } from './utils/Selector';
 import { Pointer } from './utils/Pointer';
 import { Winner } from './utils/Winner';
 import './App.css';
