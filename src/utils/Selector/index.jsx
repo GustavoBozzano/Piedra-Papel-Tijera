@@ -3,8 +3,12 @@
 import './selector.css';
 
 export function SelectorGame({ onValueSelected }) {
-  const handleRadioChange = (event) => {
-    const selectedValue = event.target.value;
+  const handleRadioChange = async (event) => {
+    event.preventDefault();
+
+    const selectedValue = document.querySelector(
+      'input[name="radio"]:checked'
+    ).value;
     onValueSelected(selectedValue);
     console.log(selectedValue);
   };
@@ -14,7 +18,7 @@ export function SelectorGame({ onValueSelected }) {
         <form onSubmit={handleRadioChange}>
           <div className="input-container">
             <input
-              id="playHuman"
+              id="piedra"
               className="radio-button"
               type="radio"
               name="radio"
@@ -24,7 +28,7 @@ export function SelectorGame({ onValueSelected }) {
               <div className="icon piedra-icon">
                 <img src="../public/Piedra.jpg" alt="Piedra" />
               </div>
-              <label htmlFor="walk" className="radio-tile-label">
+              <label htmlFor="piedra" className="radio-tile-label">
                 Piedra
               </label>
             </div>
@@ -32,7 +36,7 @@ export function SelectorGame({ onValueSelected }) {
 
           <div className="input-container">
             <input
-              id="playHuman"
+              id="papel"
               className="radio-button"
               type="radio"
               name="radio"
@@ -50,7 +54,7 @@ export function SelectorGame({ onValueSelected }) {
 
           <div className="input-container">
             <input
-              id="playHuman"
+              id="tijera"
               className="radio-button"
               type="radio"
               name="radio"
@@ -64,6 +68,15 @@ export function SelectorGame({ onValueSelected }) {
                 Tijera
               </label>
             </div>
+          </div>
+          <div>
+            <button
+              type="submit"
+              id="button"
+              //  disabled={noPlay}
+            >
+              JUGADA
+            </button>
           </div>
         </form>
       </div>
