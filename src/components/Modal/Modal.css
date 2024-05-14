@@ -9,8 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: perspective(500px) translateZ(200px);
-  transition: transform 0.3s ease-in-out;
+/*   transform: perspective(500px) translateZ(200px);
+  transition: transform 0.3s ease-in-out; */
 }
 
 .modal-content {
