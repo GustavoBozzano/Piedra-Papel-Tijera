@@ -110,7 +110,6 @@ function App() {
   }
   /////////////////////////////////////////////////     FUNC PARA CERRAR EL MODAL    ///////////////////////////////////
   const handleModalClose = () => {
-    confetiOk && setConfetiOk(false);
     setShowModal(false);
     setShowIconPc('');
     setShwoIconHuman('');

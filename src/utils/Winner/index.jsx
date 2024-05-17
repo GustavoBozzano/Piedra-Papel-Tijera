@@ -17,7 +17,6 @@ export function Winner(
     setPuntosPc(0);
     setNoPlay(true);
   } else if (puntosPc == 5) {
-    setConfetiOk(true);
     setMess('¡Juego terminado! ¡la IA ha GANADO la partida! ');
     setPuntosHumano(0);
     setPuntosPc(0);

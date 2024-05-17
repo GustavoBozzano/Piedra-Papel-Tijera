@@ -15,7 +15,8 @@ export function Confeti() {
       enable: true,
     },
     background: {
-      color: '#000',
+      color: '#ffaaaa',
+      opacity: 0,
     },
     preset: 'confetti',
     particles: {
