@@ -21,8 +21,9 @@ function App() {
   const [noPlay, setNoPlay] = useState(true); //  DESHABILITAR BOTON DE JUGAR
   const [showModal, setShowModal] = useState(false); // MODAL
   const [mess, setMess] = useState(); // MENSAJE EN EL MODAL
-  const [showIconHuman, setShwoIconHuman] = useState('');
-  const [showIconPc, setShowIconPc] = useState('');
+  const [showIconHuman, setShwoIconHuman] = useState(''); // ICONO PARA EL USUARIO
+  const [showIconPc, setShowIconPc] = useState(''); // ICONO PARA LA IA
+  const [confetiOk, setConfetiOk] = useState(false);
 
   ///////////////////////////////////////////////////  ONCHANGE DEL SELECT  ////////////////////////////////////////////
   const handleChange = async (e) => {
@@ -98,8 +99,10 @@ function App() {
       setPuntosHumano,
       setPuntosPc,
       setNoPlay,
+      setConfetiOk,
       puntosPc,
-      puntosHumano
+      puntosHumano,
+      confetiOk
     );
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   } catch (error) {
@@ -107,6 +110,7 @@ function App() {
   }
   /////////////////////////////////////////////////     FUNC PARA CERRAR EL MODAL    ///////////////////////////////////
   const handleModalClose = () => {
+    confetiOk && setConfetiOk(false);
     setShowModal(false);
     setShowIconPc('');
     setShwoIconHuman('');
