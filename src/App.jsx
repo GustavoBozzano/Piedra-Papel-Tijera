@@ -122,57 +122,6 @@ function App() {
         <div>
           <label htmlFor="human">Selecciona tu jugada: </label>
         </div>
-        {/* <select
-            name="human"
-            id="playHuman"
-            defaultValue={''}
-            onChange={handleChange}
-          >
-            <option value="" disabled>
-              Elije
-            </option>
-            <option value="PIEDRA">Piedra</option>
-            <option value="PAPEL">Papel</option>
-            <option value="TIJERA">Tijera</option>
-          </select> */}
-        {/* <div className="card">
-          <div>
-            <label htmlFor="piedra">
-              <strong>PIEDRA</strong>
-            </label>
-            <input
-              type="radio"
-              name="human"
-              id="piedra"
-              value="PIEDRA"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="papel">
-              <strong>PAPEL</strong>
-            </label>
-            <input
-              type="radio"
-              name="human"
-              id="papel"
-              value="PAPEL"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="tijera">
-              <strong>TIJERA</strong>
-            </label>
-            <input
-              type="radio"
-              name="human"
-              id="tijera"
-              value="TIJERA"
-              onChange={handleChange}
-            />
-          </div>
-        </div> */}
         <div className="radio-input">
           <label>
             <input

@@ -6,6 +6,7 @@
   background: url('../public/piedra-papel-tijera.jpg');
   background-size: cover;
   background-position: center;
+
   /* background-repeat: repeat-x; */
   /* background-attachment: fixed; */
 
@@ -77,5 +78,14 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/***************************************   VISTA  MOVIL   ****************************************/
+@media (max-width: 768px) {
+  :root {
+    background: url('../public/piedra-papel-tijera-vertical.jpg');
+    background-size: 100%;
+    background-position: center;
   }
 }
