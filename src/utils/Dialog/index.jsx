@@ -16,14 +16,14 @@ export function Dialog({
     <div>
       <h3 className="title">{message}</h3>
       <hr />
-      <h5>
+      <h4>
         <u>Tú:</u> {playHumano}
-      </h5>
+      </h4>
       <img src={showIconHuman} alt="Icono seleccionado del Jugador" />
-      <h5>
+      <h4>
         <hr />
         <u>"IA":</u> {playPc}
-      </h5>
+      </h4>
       <img src={showIconPc} alt="Icono seleccionado por IA" />
     </div>
   );
