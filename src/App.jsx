@@ -76,9 +76,6 @@ function App() {
       Pointer(
         jugadaPc,
         jugadaHumano,
-        iconPapel,
-        iconPiedra,
-        iconTijera,
         setShowModal,
         setMess,
         setShwoIconHuman,
