@@ -25,6 +25,10 @@ function App() {
   const [showIconPc, setShowIconPc] = useState(''); // ICONO PARA LA IA
   const [confetiOk, setConfetiOk] = useState(false);
 
+  const resetGame = async (e) => {
+    e.preventDefault();
+    window.location.reload();
+  };
   ///////////////////////////////////////////////////  ONCHANGE DEL SELECT  ////////////////////////////////////////////
   const handleChange = async (e) => {
     setNoPlay(false);
@@ -164,6 +168,15 @@ function App() {
             disabled={noPlay}
           >
             JUGADA
+          </button>
+
+          <button
+            type="button"
+            id="reset"
+            className="bn632-hover bn27"
+            onClick={resetGame}
+          >
+            REINICIAR
           </button>
         </div>
 
