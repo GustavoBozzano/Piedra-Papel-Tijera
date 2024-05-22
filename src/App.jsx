@@ -19,12 +19,10 @@ function App() {
   const [mess, setMess] = useState(''); // MENSAJE EN EL MODAL
   const [showIconHuman, setShwoIconHuman] = useState(''); // ICONO PARA EL USUARIO
   const [showIconPc, setShowIconPc] = useState(''); // ICONO PARA LA IA
-  const [confetiOk, setConfetiOk] = useState(false);
 
   ///////////////////////////////////////////////////   BOTON DE RESET    ////////////////////////////////////////////
   const resetGame = async (e) => {
     e.preventDefault();
-    setConfetiOk(false);
     window.location.reload();
   };
   ///////////////////////////////////////////////////  ONCHANGE DEL SELECT  ////////////////////////////////////////////
@@ -89,8 +87,6 @@ function App() {
         // setPuntosHumano,
         // setPuntosPc,
         setNoPlay,
-        setConfetiOk,
-        confetiOk,
         puntosPc,
         puntosHumano
       );
