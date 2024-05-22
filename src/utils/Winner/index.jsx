@@ -2,22 +2,23 @@ import { Confeti } from '../../components/Confeti';
 
 export function Winner(
   setMess,
-  setPuntosHumano,
-  setPuntosPc,
+  // setPuntosHumano,
+  // setPuntosPc,
   setNoPlay,
   setConfetiOk,
+  confetiOk,
   puntosPc,
-  puntosHumano,
-  confetiOk
+  puntosHumano
 ) {
-  if (puntosHumano == 5) {
+  if (puntosHumano === 5) {
     setConfetiOk(true);
     setMess('¡Juego terminado! ¡Has GANADO la partida!');
     // setPuntosHumano(0);
     // setPuntosPc(0);
     setNoPlay(true);
-  } else if (puntosPc == 5) {
+  } else if (puntosPc === 5) {
     setMess('¡Juego terminado! ¡la IA ha GANADO la partida! ');
+    setConfetiOk(false);
     // setPuntosHumano(0);
     // setPuntosPc(0);
     setNoPlay(true);

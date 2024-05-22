@@ -1,9 +1,10 @@
+const iconPiedra = './Piedra.jpg';
+const iconPapel = './Papel.jpg';
+const iconTijera = './Tijera.jpg';
+
 export function Pointer(
   jugadaPc,
   jugadaHumano,
-  iconPapel,
-  iconPiedra,
-  iconTijera,
   setShowModal,
   setMess,
   setShwoIconHuman,

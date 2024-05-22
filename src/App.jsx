@@ -9,9 +9,6 @@ import './App.css';
 function App() {
   let jugadaPc = '';
   let jugadaHumano = '';
-  const iconPiedra = './Piedra.jpg';
-  const iconPapel = './Papel.jpg';
-  const iconTijera = './Tijera.jpg';
 
   const [playHumano, setPlayHumano] = useState(''); // JUGADA HUMANO
   const [playPc, setPlayPc] = useState(''); // JUGADA PC
@@ -27,6 +24,7 @@ function App() {
   ///////////////////////////////////////////////////   BOTON DE RESET    ////////////////////////////////////////////
   const resetGame = async (e) => {
     e.preventDefault();
+    setConfetiOk(false);
     window.location.reload();
   };
   ///////////////////////////////////////////////////  ONCHANGE DEL SELECT  ////////////////////////////////////////////
@@ -88,13 +86,13 @@ function App() {
       //////////////////////////////////////////   VERIFICACION DEL GANADOR    ///////////////////////////////////////////
       Winner(
         setMess,
-        setPuntosHumano,
-        setPuntosPc,
+        // setPuntosHumano,
+        // setPuntosPc,
         setNoPlay,
         setConfetiOk,
+        confetiOk,
         puntosPc,
-        puntosHumano,
-        confetiOk
+        puntosHumano
       );
 
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
