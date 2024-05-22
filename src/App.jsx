@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import Modal from './components/Modal';
 import { Dialog } from './utils/Dialog';
@@ -14,23 +13,24 @@ function App() {
   const iconPapel = './Papel.jpg';
   const iconTijera = './Tijera.jpg';
 
-  const [playHumano, setPlayHumano] = useState(); // JUGADA HUMANO
-  const [playPc, setPlayPc] = useState(); // JUGADA PC
+  const [playHumano, setPlayHumano] = useState(''); // JUGADA HUMANO
+  const [playPc, setPlayPc] = useState(''); // JUGADA PC
   const [puntosHumano, setPuntosHumano] = useState(0); // PUNTAJE HUMANO
   const [puntosPc, setPuntosPc] = useState(0); // PUNTAJE PC
   const [noPlay, setNoPlay] = useState(true); //  DESHABILITAR BOTON DE JUGAR
   const [showModal, setShowModal] = useState(false); // MODAL
-  const [mess, setMess] = useState(); // MENSAJE EN EL MODAL
+  const [mess, setMess] = useState(''); // MENSAJE EN EL MODAL
   const [showIconHuman, setShwoIconHuman] = useState(''); // ICONO PARA EL USUARIO
   const [showIconPc, setShowIconPc] = useState(''); // ICONO PARA LA IA
   const [confetiOk, setConfetiOk] = useState(false);
 
+  ///////////////////////////////////////////////////   BOTON DE RESET    ////////////////////////////////////////////
   const resetGame = async (e) => {
     e.preventDefault();
     window.location.reload();
   };
   ///////////////////////////////////////////////////  ONCHANGE DEL SELECT  ////////////////////////////////////////////
-  const handleChange = async (e) => {
+  const handleChange = async () => {
     setNoPlay(false);
   };
 
@@ -41,10 +41,7 @@ function App() {
     setShowModal(true);
 
     try {
-      ////////////////    jugada seleccionada por el Usuario   //////////////////////////////////////////////
-
-      // jugadaHumano = document.getElementsByName('human').value;
-
+      /////////////////////////    jugada seleccionada por el Usuario   //////////////////////////////////////////////
       jugadaHumano = document.querySelector(
         'input[name="human"]:checked'
       ).value;
@@ -57,7 +54,7 @@ function App() {
       console.log('Jugador: ', jugadaHumano);
       setPlayHumano(jugadaHumano);
 
-      //      //    jugada automatica por el Ordenador   //
+      //////////////////////////   jugada automatica por el Ordenador  //////////////////////////////////////////////////
       let playerPc = Math.floor(Math.random() * 3 + 1);
       switch (playerPc) {
         case 1:
@@ -87,7 +84,20 @@ function App() {
         setShwoIconHuman,
         setShowIconPc,
         setPuntosHumano,
-        setPuntosPc
+        setPuntosPc,
+        puntosHumano,
+        puntosPc
+      );
+      //////////////////////////////////////////   VERIFICACION DEL GANADOR    ///////////////////////////////////////////
+      Winner(
+        setMess,
+        setPuntosHumano,
+        setPuntosPc,
+        setNoPlay,
+        setConfetiOk,
+        puntosPc,
+        puntosHumano,
+        confetiOk
       );
 
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -95,23 +105,6 @@ function App() {
       console.log(error);
     }
   };
-
-  try {
-    //////////////////////////////////////////   VERIFICACION DEL GANADOR    ///////////////////////////////////////////
-    Winner(
-      setMess,
-      setPuntosHumano,
-      setPuntosPc,
-      setNoPlay,
-      setConfetiOk,
-      puntosPc,
-      puntosHumano,
-      confetiOk
-    );
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  } catch (error) {
-    console.log(error);
-  }
   /////////////////////////////////////////////////     FUNC PARA CERRAR EL MODAL    ///////////////////////////////////
   const handleModalClose = () => {
     setShowModal(false);
@@ -186,6 +179,7 @@ function App() {
         </div>
 
         <div className="pointsGame">
+          <p>(el primero que llega a 5 puntos GANA.!!)</p>
           <h2>Total Puntos Humano: {puntosHumano}</h2>
           <h2>Total Puntos "IA": {puntosPc}</h2>
         </div>

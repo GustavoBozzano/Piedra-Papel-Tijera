@@ -9,8 +9,17 @@ export function Pointer(
   setShwoIconHuman,
   setShowIconPc,
   setPuntosHumano,
-  setPuntosPc
+  setPuntosPc,
+  puntosHumano,
+  puntosPc
 ) {
+  const sumaPuntosHumano = () => {
+    setPuntosHumano(puntosHumano + 1);
+  };
+  const sumaPuntosPc = () => {
+    setPuntosPc(puntosPc + 1);
+  };
+
   if (jugadaPc == jugadaHumano) {
     console.log('EMPATE');
     setShowModal(true);
@@ -28,19 +37,19 @@ export function Pointer(
   }
 
   if (jugadaHumano == 'PIEDRA' && jugadaPc == 'TIJERA') {
-    setPuntosHumano((puntosHumano) => puntosHumano + 1);
+    sumaPuntosHumano();
     console.log(`PUNTO PARA JUGADOR`);
     setMess('PUNTO para tí..!!');
     setShwoIconHuman(iconPiedra);
     setShowIconPc(iconTijera);
   } else if (jugadaHumano == 'PAPEL' && jugadaPc == 'PIEDRA') {
-    setPuntosHumano((puntosHumano) => puntosHumano + 1);
+    sumaPuntosHumano();
     console.log(`PUNTO PARA JUGADOR`);
     setMess('PUNTO para tí..!!');
     setShwoIconHuman(iconPapel);
     setShowIconPc(iconPiedra);
   } else if (jugadaHumano == 'TIJERA' && jugadaPc == 'PAPEL') {
-    setPuntosHumano((puntosHumano) => puntosHumano + 1);
+    sumaPuntosHumano();
     console.log(`PUNTO PARA JUGADOR`);
     setMess('PUNTO para tí..!!');
     setShwoIconHuman(iconTijera);
@@ -48,19 +57,19 @@ export function Pointer(
   }
 
   if (jugadaPc == 'PIEDRA' && jugadaHumano == 'TIJERA') {
-    setPuntosPc((puntosPc) => puntosPc + 1);
+    sumaPuntosPc();
     console.log(`PUNTO PARA IA`);
     setMess('PUNTO para "IA"..!!');
     setShowIconPc(iconPiedra);
     setShwoIconHuman(iconTijera);
   } else if (jugadaPc == 'PAPEL' && jugadaHumano == 'PIEDRA') {
-    setPuntosPc((puntosPc) => puntosPc + 1);
+    sumaPuntosPc();
     console.log(`PUNTO PARA IA`);
     setMess('PUNTO para "IA"..!!');
     setShowIconPc(iconPapel);
     setShwoIconHuman(iconPiedra);
   } else if (jugadaPc == 'TIJERA' && jugadaHumano == 'PAPEL') {
-    setPuntosPc((puntosPc) => puntosPc + 1);
+    sumaPuntosPc();
     console.log(`PUNTO PARA IA`);
     setMess('PUNTO para "IA"..!!');
     setShowIconPc(iconTijera);

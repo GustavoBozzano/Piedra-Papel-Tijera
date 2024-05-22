@@ -13,13 +13,13 @@ export function Winner(
   if (puntosHumano == 5) {
     setConfetiOk(true);
     setMess('¡Juego terminado! ¡Has GANADO la partida!');
-    setPuntosHumano(0);
-    setPuntosPc(0);
+    // setPuntosHumano(0);
+    // setPuntosPc(0);
     setNoPlay(true);
   } else if (puntosPc == 5) {
     setMess('¡Juego terminado! ¡la IA ha GANADO la partida! ');
-    setPuntosHumano(0);
-    setPuntosPc(0);
+    // setPuntosHumano(0);
+    // setPuntosPc(0);
     setNoPlay(true);
   }
   confetiOk && Confeti();

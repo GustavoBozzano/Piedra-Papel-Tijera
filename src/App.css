@@ -58,12 +58,12 @@
 
   background-image: linear-gradient(
     to right,
-    #25aae1,
-    #230d94,
-    #04befe,
-    #3f86ed
+    #ff8585,
+    #b81313,
+    #fe0404,
+    #ed3f3f
   );
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  box-shadow: 0 4px 15px 0 rgba(234, 65, 65, 0.75);
 }
 /********************************************************************************************/
 
@@ -152,7 +152,7 @@ h1 {
 
 .pointsGame {
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   animation: roll-in-blurred-right 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
   background-color: rgba(60, 180, 255, 0.1);
   border-radius: 15px;
