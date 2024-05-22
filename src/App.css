@@ -184,7 +184,7 @@ h1 {
 .radio-input {
   --container_width: 300px;
   position: relative;
-  margin-left: 1rem;
+  margin-left: 3rem;
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -238,4 +238,10 @@ h1 {
 
 .radio-input label:nth-child(3):has(input:checked) ~ .selection {
   transform: translateX(calc(var(--container_width) * 2 / 3));
+}
+
+@media (max-width: 768px) {
+  .bn632-hover {
+    margin: 15px;
+  }
 }
