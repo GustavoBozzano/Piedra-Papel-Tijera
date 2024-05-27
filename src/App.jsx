@@ -82,14 +82,7 @@ function App() {
         puntosPc
       );
       //////////////////////////////////////////   VERIFICACION DEL GANADOR    ///////////////////////////////////////////
-      Winner(
-        setMess,
-        // setPuntosHumano,
-        // setPuntosPc,
-        setNoPlay,
-        puntosPc,
-        puntosHumano
-      );
+      Winner(setMess, setNoPlay, puntosPc, puntosHumano);
 
       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     } catch (error) {
