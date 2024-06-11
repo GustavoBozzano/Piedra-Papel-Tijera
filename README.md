@@ -1,8 +1,9 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Juego básico de PIEDRA-PAPEL-TIJERA.  
+Selecciona tu jugada, e intenta ganarle a la "IA" ...!!!  
 
-Currently, two official plugins are available:
+Tienes 5 intentos...!!!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+DEMO:
+[Piedra-Papel-Tijera](https://gusdev-piedra-papel-tijera.netlify.app/)
